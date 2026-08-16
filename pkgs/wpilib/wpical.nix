@@ -21,4 +21,6 @@ buildBinTool {
   iconPng = "${allwpilibSources}/wpical/src/main/native/resources/wpical-512.png";
 
   meta.description = "Field Calibration Tool";
+  # No 2027 alpha Maven artifacts published past alpha-3; see allwpilibSources.nix
+  meta.broken = true;
 }

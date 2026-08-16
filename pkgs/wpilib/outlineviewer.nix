@@ -15,4 +15,6 @@ buildBinTool {
   iconPng = "${allwpilibSources}/outlineviewer/src/main/native/resources/ov-512.png";
 
   meta.description = "A utility used to view, modify and add to the contents of NetworkTables";
+  # No 2027 alpha Maven artifacts published past alpha-3; see allwpilibSources.nix
+  meta.broken = true;
 }

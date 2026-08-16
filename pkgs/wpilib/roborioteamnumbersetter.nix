@@ -21,4 +21,6 @@ buildBinTool {
   iconPng = "${allwpilibSources}/roborioteamnumbersetter/src/main/native/resources/rtns-512.png";
 
   meta.description = "A trajectory generation suite for FRC teams";
+  # No 2027 artifacts at all; the roboRIO is being replaced by Systemcore for this season
+  meta.broken = true;
 }

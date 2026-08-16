@@ -17,5 +17,7 @@ buildJavaTool {
 
   meta = {
     description = "A straightforward, customizable driveteam-focused dashboard for FRC";
+    # Shuffleboard has no 2027 artifacts at all; appears discontinued for the season
+    broken = true;
   };
 }

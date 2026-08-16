@@ -15,4 +15,6 @@ buildBinTool {
   iconPng = "${allwpilibSources}/datalogtool/src/main/native/resources/dlt-512.png";
 
   meta.description = "A tool for downloading logs from FRC robots";
+  # No 2027 alpha Maven artifacts published past alpha-3; see allwpilibSources.nix
+  meta.broken = true;
 }

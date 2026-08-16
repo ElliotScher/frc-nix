@@ -18,5 +18,7 @@ buildJavaTool {
       "x86_64-linux"
       "x86_64-darwin"
     ];
+    # SmartDashboard has no 2027 artifacts at all; appears discontinued for the season
+    broken = true;
   };
 }

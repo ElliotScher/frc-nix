@@ -17,5 +17,7 @@ buildJavaTool {
 
   meta = {
     description = "A trajectory generation suite that for FRC teams to generate and follow trajectories";
+    # PathWeaver has no 2027 artifacts at all; appears discontinued for the season
+    broken = true;
   };
 }

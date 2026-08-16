@@ -15,4 +15,6 @@ buildBinTool {
   iconPng = "${allwpilibSources}/glass/src/app/native/resources/glass-512.png";
 
   meta.description = "A dashboard and data visualization tool for FRC robots";
+  # No 2027 alpha Maven artifacts published past alpha-3; see allwpilibSources.nix
+  meta.broken = true;
 }

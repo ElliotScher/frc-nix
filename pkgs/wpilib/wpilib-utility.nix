@@ -68,5 +68,7 @@ stdenv.mkDerivation rec {
       "aarch64-linux"
       "armv7l-linux"
     ];
+    # No wpilibutility-linux.tar.gz has ever been published for a 2027 alpha release
+    broken = true;
   };
 }

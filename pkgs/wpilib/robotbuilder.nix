@@ -52,5 +52,7 @@ stdenv.mkDerivation rec {
     description = "An application which generates FRC robot code";
     license = licenses.bsd3;
     platforms = platforms.all;
+    # RobotBuilder has no 2027 artifacts at all; appears discontinued for the season
+    broken = true;
   };
 }
