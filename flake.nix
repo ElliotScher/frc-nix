@@ -40,7 +40,7 @@
       legacyPackages = forEachPkgs (pkgs: import ./default.nix { inherit pkgs; });
       packages = forEachPkgs (
         pkgs:
-        pkgs.lib.filterAttrs (_: v: pkgs.lib.isDerivation v) (
+        pkgs.lib.filterAttrs (_: v: pkgs.lib.isDerivation v && !(v.meta.broken or false)) (
           let
             packages = self.legacyPackages.${pkgs.stdenv.hostPlatform.system};
           in

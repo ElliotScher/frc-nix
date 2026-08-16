@@ -507,7 +507,11 @@ update_github_package() {
       error "failed to check latest version. (Are you being ratelimited?)"
     fi
 
-    if [[ "$current_version" == "$latest_version" ]]; then
+    # Never move backwards: GitHub's "latest release" API only considers
+    # non-prerelease tags, so a pinned prerelease (e.g. a WPILib alpha) would
+    # otherwise look "outdated" and get silently downgraded to the newest
+    # stable release.
+    if [[ "$current_version" == "$latest_version" ]] || ! version_less_than "$current_version" "$latest_version"; then
         if [[ "$FORCE" == "true" ]]; then
             echo "  $name: force refetching hashes ($current_version)"
             update_hashes "$file" "$tool_name" "$current_version" "github"
